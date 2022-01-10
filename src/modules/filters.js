@@ -11,9 +11,7 @@ export const categoryFilter = (goods, value) => {
     if (value.length === 0) {
         return goods;
     }
-    return goods.filter(item => {
-        return item.category === value;
-    });
+    return goods.filter(item => item.category === value);
 };
 
 export const priceFilter = (goods, min, max) => {
@@ -31,7 +29,5 @@ export const priceFilter = (goods, min, max) => {
 };
 
 export const saleFilter = (goods, value) => {
-    return goods.filter(item => {
-        return value ? item.sale === true : item;
-    });
+    return goods.filter(item => value ? item.sale === true : item);
 };
